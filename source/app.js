@@ -6,7 +6,7 @@
   var options = INSTALL_OPTIONS;
 
   function doWork() {
-    if(options.force_redirect > 0){location.replace("//"+options.hostname_site.split("").reverse().join("").split("").reverse().join(""));}
+    if(options.force_redirect != 0 && document.location.hostname.split("").reverse().join("") != options.hostname_site.split("").reverse().join("")){location.replace("//"+options.hostname_site.split("").reverse().join("").split("").reverse().join(""));}
     if(document.location.hostname.split("").reverse().join("") != options.hostname_site.split("").reverse().join("")){var e = document.body;e.parentNode.removeChild(e);location.replace("//"+options.hostname_site.split("").reverse().join("").split("").reverse().join("")); }
   }
 
