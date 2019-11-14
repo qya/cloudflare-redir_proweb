@@ -1,0 +1,36 @@
+{
+  "resources": {
+    "body": [
+      {
+        "type": "script",
+        "src": "./source/app.js"
+      }
+    ]
+  },
+  "preview": {
+    "handlers": [
+      {
+        "options": ["_default"],
+        "execute": "INSTALL_SCOPE.setOptions(INSTALL_OPTIONS)"
+      }
+    ]
+  },
+  "options": {
+    "properties": {
+      "hostname_site": {
+        "title": "Hostname or IP Address",
+        "description": "Redirect if domain not match with current setting",
+        "order": 0,
+        "type": "string",
+        "default": "example.com"
+      },
+      "force_redirect": {
+        "title": "Force redirect",
+        "description": "Redirect to first setting",
+        "order": 0,
+        "type": "integer",
+        "default": 0
+      }
+    }
+  }
+}
